@@ -1,0 +1,232 @@
+﻿<html>
+	
+<head>
+	<title>APIs</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+    <meta name="generator" content="HelpNDoc">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript"><!--
+		var sTopicId = "APIFunctions";
+		if (top.frames.length == 0)
+			top.location.href = "VOEIS Tutorial.html?" + sTopicId
+		else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			top.FrameTOC.SelectTocItem(sTopicId);
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>APIs</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="AdvancedTopics.html">Advanced Topics</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="AdvancedTopics.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="AdvancedTopics.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="AdvancedTopics1.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8">VOEIS provides a number of appliction programming interface (API) calls to users who wish to develop custom user interfaces that interact with the VOEIS server. Additionally, the APIs can be used within existing scientific workflows to facilitate data upload, data download, QAQC, or visualization tasks. The APIs available for use with VOEIS are listed below. Click </span><a class="rvts21" href="https://voeis.msu.montana.edu/doc/yard/Voeis/ApivsController.html">here</a><span class="rvts8"> to view the most current list of APIs and more extensive documentation and examples.</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts33">- (JSON String) create_project_data_stream</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;create_project_data_stream API for creating a new data stream within a Project.</span></p>
+<p><span class="rvts14"><br></span></p>
+<p><span class="rvts33">- (JSON String) create_project_data_stream_column</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;create_project_data_stream_column API for creating a new data_stream_column within a Project.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (Object) create_project_sample</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;create_project_sample API for creating a new sample within the current project.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (Object) create_project_sample_measurement</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;create_project_sample_measurement API for creating a new sample measurement within the current project.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (JSON String) create_project_sensor_type</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;create_project_sensor_type API for creating a sensor_type within a Project.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (JSON String) create_project_sensor_value</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;create_project_sensor_value API for creating a sensor_value within a Project.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (Object) create_project_site</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;create_project_site API for creating a new site within in a project.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (Object) create_project_variable</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;create_project_variable API for creating a new variable within in a project.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (Object) dojo_variables_for_tree</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts33">- (Object) format_response(data_obj, format)</span></p>
+<p><span class="rvts8"> &nbsp; </span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts33">- (Object) get_data_stream_data</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;pulls data from a data stream.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (Object) get_dojo_voeis_variables</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts33">- (JSON String) get_job_status</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;get_job_status API for getting the status of a job within a project.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (JSON String) get_project_data_summary</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;get_project_data_summary API for getting a list of the data within a Project.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (JSON String) get_project_data_templates</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;get_project_data_templates API for getting a list of the data_templates within a Project.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (JSON String) get_project_jobs</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;get_project_jobs API for getting the jobs within a project -either all or by job status.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (Object) get_project_sample</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;get_project_sample API for getting a sample within the current project.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (Object) get_project_sample_measurements</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;get_project_sample_measurements API for getting all the samples within the current project.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (Object) get_project_samples</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;get_project_samples API for getting all the samples within the current project.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (Object) get_project_site</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;get_project_site API for getting a site within a Project.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (JSON) get_project_site_data</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;pulls data from a within a project’s site.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (JSON) get_project_site_sample_data_last_update</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;pulls data from a within a project’s site for samples only.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (JSON) get_project_site_sample_values_by_variable</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;pulls data from a within a project’s site for samples only.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (JSON) get_project_site_sample_values_count_by_variable</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;returns the number of data record from a within a project’s site for a variable for sample values.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (JSON) get_project_site_sensor_data_last_update</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;pulls data from a within a project’s site.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (JSON) get_project_site_sensor_values_by_variable</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;pulls data from a within a project’s site.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (JSON) get_project_site_sensor_values_count_by_variable</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;returns the number of data record from a within a project’s site for a variable for sensor values.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (JSON) get_project_site_variable_data</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;pulls data from a within a project’s by site and the variable.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (JSON) get_project_site_variable_data_count</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;counts the data records from a within a project’s by site and the variable.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (Object) get_project_sites</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;get_project_sites API for getting all the sites within in a project.</span></p>
+<p><span class="rvts18"> &nbsp; </span></p>
+<p><span class="rvts33">- (Object) get_project_variable</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;get_project_variable API for getting a variable within a Project.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (JSON) get_project_variable_data</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;pulls data from a within a project’s by the variable.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (JSON) get_project_variable_data_count</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;A JSON object with variable_object, site_object, project_object, time_series_count, and sample_count fields.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (Object) get_project_variables</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;get_project_variables API for getting all the sites within in a project.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (Object) get_voeis_sites</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;get_voeis_sites API for getting all the sites that are public in the VOEIS system.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (Object) get_voeis_variables</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;get_voeis_variables API for getting all the variables within in the VOEIS system.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (Object) import_voeis_variable_to_project</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;import_voeis_variable_to_project API for getting a variable within in the VOEIS system into the current project.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (Object) update_project_site</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;update_project_site API for updating a site within in a project.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (Object) update_project_variable</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;update_project_variable API for creating a new variable within in a project.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (Object) update_voeis_variable</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts33">- (String, Integer) upload_data</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;alows user to upload csv file to be processed into data this requires that a site and a datastream has already been created to parse this file.</span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;</span></p>
+<p><span class="rvts33">- (String, Integer) upload_logger_data</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"> &nbsp; &nbsp;alows user to upload csv file to be processed into data this requires that a datastream has already been created to parse this file.</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"><br></span></p>
+<p class="rvps2"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="http://www.helpndoc.com">Full featured multi-format Help generator</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2011,   Montana State University</div>
+		</div>
+	</body>
+	
+</html>
+

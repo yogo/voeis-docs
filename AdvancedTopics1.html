@@ -1,0 +1,118 @@
+﻿<html>
+	
+<head>
+	<title>RQL Query Interface</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+    <meta name="generator" content="HelpNDoc">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript"><!--
+		var sTopicId = "AdvancedTopics1";
+		if (top.frames.length == 0)
+			top.location.href = "VOEIS Tutorial.html?" + sTopicId
+		else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			top.FrameTOC.SelectTocItem(sTopicId);
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>RQL Query Interface</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="AdvancedTopics.html">Advanced Topics</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="AdvancedTopics.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="APIFunctions.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p class="rvps4"><span class="rvts15"><br></span></p>
+<p class="rvps5"><span class="rvts18">Understanding RQL</span></p>
+<p class="rvps4"><span class="rvts15"><br></span></p>
+<p class="rvps4"><span class="rvts27">Advanced users of VOEIS may use the RQL query language to request data from the server. The RQL grammar is based around standard URI delimiters. The standard rules for encoding strings with URL encoding (%xx) are observed. RQL also supersets FIQL. Therefore we can write a query that finds resources with a "data_value" property below 10 with a "lt" operator using FIQL syntax:</span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">data_value=lt=10</span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27">Which is identical (and sugar for call operator syntax known as the normalized form):</span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">lt(data_value,10)</span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27">One can combine conditions with multiple operators with "&amp;":</span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">site_id=3&amp;data_value=lt=10</span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27">Is the same as:</span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">eq(site_id,3)&amp;lt(data_value,10)</span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27">Which is also the same as:</span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">and(eq(site_id,3),lt(data_value,10))</span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27">Here is a definition of the common operators (individual stores may have support for more less operators):</span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27"> &nbsp; &nbsp;select(&lt;property&gt;,&lt;property&gt;,...) - Trims each object down to the set of properties defined in the arguments</span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27"> &nbsp; &nbsp;and(&lt;query&gt;,&lt;query&gt;,...) - Applies all the given queries</span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27"> &nbsp; &nbsp;or(&lt;query&gt;,&lt;query&gt;,...) - The union of the given queries</span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27"> &nbsp; &nbsp;eq(&lt;property&gt;,&lt;value&gt;) - Filters for objects where the specified property's value is equal to the provided value</span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27"> &nbsp; &nbsp;lt(&lt;property&gt;,&lt;value&gt;) - Filters for objects where the specified property's value is less than the provided value</span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27"> &nbsp; &nbsp;le(&lt;property&gt;,&lt;value&gt;) - Filters for objects where the specified property's value is less than or equal to the provided value</span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27"> &nbsp; &nbsp;gt(&lt;property&gt;,&lt;value&gt;) - Filters for objects where the specified property's value is greater than the provided value</span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27"> &nbsp; &nbsp;ge(&lt;property&gt;,&lt;value&gt;) - Filters for objects where the specified property's value is greater than or equal to the provided value</span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27"> &nbsp; &nbsp;ne(&lt;property&gt;,&lt;value&gt;) - Filters for objects where the specified property's value is not equal to the provided value</span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27"> &nbsp; &nbsp;count() - Returns the count of the number of records in the query's result set</span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps5"><span class="rvts18">An Example for the Big Sky project in VOEIS:</span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts44">RQL Statement</span><span class="rvts27">: &nbsp;https://voeis.msu.montana.edu/projects/b6db01d0-e606-11df-863f-6e9ffb75bc80/data_values.json?and(and(eq(site_id,5),gt(date_time_utc,5/11/2012)),or(eq(variable_id,298),or(eq(variable_id,264),eq(variable_id,153))))</span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27">This example returns a JSON response for data_value records that have a site_id=5, date_time_utc &gt; 5/11/2012 and a variable_id = 298 or 153 or 164.</span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27">When using RQL queries outside of a browser the api_key parameter must be included for authentication and authorization. &nbsp;Here is an example(note to test this you need to user YOUR api_key): &nbsp;https://voeis.msu.montana.edu/projects/b6db01d0-e606-11df-863f-6e9ffb75bc80/sites.json?eq(id,1)&amp;api_key=e79b135dcfeb6777bbaa6c9ba9c1d0fc474d7adb755fa215446c398cwerq57adf</span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps4"><span class="rvts27"><br></span></p>
+<p class="rvps2"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="http://www.helpndoc.com">Free PDF documentation generator</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2011,   Montana State University</div>
+		</div>
+	</body>
+	
+</html>
+

@@ -41,23 +41,23 @@
 		
 <p><span class="rvts9"><br></span></p>
 <p><span class="rvts9">This tutorial describes how to successfully load a laboratory sample data file into VOEIS. A laboratory sample data value is an individual value or measurement that is associated with a sample volume collected from some medium, such as stream water grab samples or soil core samples. Individual samples may be associated with one or more variables. For example, a single grab sample of stream water can be analyzed for DOC, DIN, and [Ca]. Therefore, the way this data is stored in VOEIS is slightly different from the way that field observation data is stored. The relationship between the individual data sample values and the sample ID is preserved. When users query on a single sample ID, VOEIS will return the data values for all of the variables associated with that sample.</span></p>
-<h2 class="rvps12"><span class="rvts0"><span class="rvts29"><br></span></span></h2>
-<h2 class="rvps13"><span class="rvts0"><span class="rvts30">Supported Data File Formats</span></span></h2>
+<h2 class="rvps12"><span class="rvts0"><span class="rvts30"><br></span></span></h2>
+<h2 class="rvps13"><span class="rvts0"><span class="rvts31">Supported Data File Formats</span></span></h2>
 <p><span class="rvts9"><br></span></p>
 <p><span class="rvts9">The VOEIS workflow for loading data samples is constructed to load data from individual files. VOEIS currently supports comma delimited text files (.csv). These files may have one or more header rows, but the first instance of sample data values in each column must occur in the same row. </span></p>
-<h2 class="rvps12"><span class="rvts0"><span class="rvts29"><br></span></span></h2>
-<h2 class="rvps13"><span class="rvts0"><span class="rvts30">Creating Input Files</span></span></h2>
+<h2 class="rvps12"><span class="rvts0"><span class="rvts30"><br></span></span></h2>
+<h2 class="rvps13"><span class="rvts0"><span class="rvts31">Creating Input Files</span></span></h2>
 <p><span class="rvts9"><br></span></p>
-<p><span class="rvts9">The current VOEIS workflow requires that sample data input files be site specific. A single input file must </span><span class="rvts31">not</span><span class="rvts9"> contain data from more than one site. Data files must include sample IDs, date/time stamps, and data sample values for one or more variables. Data must be organized to include individual columns for sample IDs, date/time stamps, and variables such that a given row contains sample data values (one or more variables) that were measured from a single sample collected at a specific date/time. If sample data is organized in a spreadsheet, it must be saved as a .csv file prior to loading data in VOEIS.</span></p>
+<p><span class="rvts9">The current VOEIS workflow requires that sample data input files be site specific. A single input file must </span><span class="rvts32">not</span><span class="rvts9"> contain data from more than one site. Data files must include sample IDs, date/time stamps, and data sample values for one or more variables. Data must be organized to include individual columns for sample IDs, date/time stamps, and variables such that a given row contains sample data values (one or more variables) that were measured from a single sample collected at a specific date/time. If sample data is organized in a spreadsheet, it must be saved as a .csv file prior to loading data in VOEIS.</span></p>
 <p><span class="rvts9"><br></span></p>
 <p><span class="rvts9">VOEIS can accept and parse numerous date/time formats, however, all date/time information must be contained in a single column. The following format is recommended: </span><span class="rvts9">‘</span><span class="rvts9">MM/DD/YYYY HH:MM</span><span class="rvts9">’</span><span class="rvts9">. A single numeric value or text string must represent all no-data values in any given column. It is a good idea to preserve metadata for each variable in the data input file. Metadata can be included in a header row, or in a separate file. </span></p>
 <p><span class="rvts9"><br></span></p>
-<p><span class="rvts9">IMPORTANT: Due to the unique characteristics of lab sample data and the way that data relationships are stored in VOEIS, it is critical to </span><span class="rvts31">only</span><span class="rvts9"> include lab sample values that were collected from the same sample medium (e.g. surface water) using the same method (e.g. grab sample), and analyzed by the same lab in a single input file.</span></p>
+<p><span class="rvts9">IMPORTANT: Due to the unique characteristics of lab sample data and the way that data relationships are stored in VOEIS, it is critical to </span><span class="rvts32">only</span><span class="rvts9"> include lab sample values that were collected from the same sample medium (e.g. surface water) using the same method (e.g. grab sample), and analyzed by the same lab in a single input file.</span></p>
 <p><span class="rvts9"><br></span></p>
 <p class="rvps1"><img border="0" alt hspace="1" vspace="1" src="lib/NewItem15.bmp"></p>
 <p class="rvps1"><span class="rvts9"><br></span></p>
 <p><span class="rvts9"><br></span></p>
-<h2 class="rvps13"><span class="rvts0"><span class="rvts30">Using the Upload Wizard</span></span></h2>
+<h2 class="rvps13"><span class="rvts0"><span class="rvts31">Using the Upload Wizard</span></span></h2>
 <p><span class="rvts9"><br></span></p>
 <p><span class="rvts9">After saving the data file as a .csv file, use the following steps to load data into VOEIS. </span></p>
 <p><span class="rvts9"><br></span></p>

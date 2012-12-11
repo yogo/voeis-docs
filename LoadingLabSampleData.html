@@ -1,0 +1,167 @@
+﻿<html>
+	
+<head>
+	<title>Loading Lab Sample Data Files</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+    <meta name="generator" content="HelpNDoc">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript"><!--
+		var sTopicId = "LoadingLabSampleData";
+		if (top.frames.length == 0)
+			top.location.href = "VOEIS Tutorial.html?" + sTopicId
+		else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			top.FrameTOC.SelectTocItem(sTopicId);
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Loading Lab Sample Data Files</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="UploadingData.html">Loading Data</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="UploadingData.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="UploadingData.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="LoadingLoggerDataStreams.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8">This section describes how to successfully load a laboratory sample data file into VOEIS. A laboratory sample data value is an individual value or measurement that is associated with a sample volume collected from some medium, such as stream water grab samples or soil core samples. Individual samples may be associated with one or more variables. For example, a single grab sample of stream water can be analyzed for DOC, DIN, and [Ca]. Therefore, the way this data is stored in VOEIS is slightly different from the way that field observation data is stored. The relationship between the individual data sample values and the sample ID is preserved. When users query on a single sample ID, VOEIS will return the data values for all of the variables associated with that sample.</span></p>
+<h2 class="rvps13"><span class="rvts0"><span class="rvts64"><br></span></span></h2>
+<h2 class="rvps14"><span class="rvts0"><span class="rvts64">Supported Data File Formats</span></span></h2>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8">The VOEIS workflow for loading data samples is constructed to load data from individual files. VOEIS currently supports comma delimited text files (.csv). These files may have one or more header rows, but the first instance of sample data values in each column must occur in the same row. </span></p>
+<h2 class="rvps13"><span class="rvts0"><span class="rvts64"><br></span></span></h2>
+<h2 class="rvps14"><span class="rvts0"><span class="rvts64">Creating Input Files</span></span></h2>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8">The current VOEIS workflow requires that sample data input files be site specific. A single input file must </span><span class="rvts23">not</span><span class="rvts8"> contain data from more than one site. Data files must include sample IDs, date/time stamps, and data sample values for one or more variables. Data must be organized to include individual columns for sample IDs, date/time stamps, and variables such that a given row contains sample data values (one or more variables) that were measured from a single sample collected at a specific date/time. If sample data is organized in a spreadsheet, it must be saved as a .csv file prior to loading data in VOEIS.</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8">VOEIS can accept and parse numerous date/time formats, however, all date/time information must be contained in a single column. </span><span class="rvts22">The following format is required: ‘YYYY/MM/DD HH:MM’. While VOEIS will accept other formats, problems with ambiguity may occur, greatly reducing the accuracy of data archival.</span><span class="rvts8"> A single numeric value or text string must represent all no-data values in any given column. It is a good idea to preserve metadata for each variable in the data input file. Metadata can be included in a header row, or in a separate file. </span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8">IMPORTANT: Due to the unique characteristics of lab sample data and the way that data relationships are stored in VOEIS, it is critical to </span><span class="rvts23">only</span><span class="rvts8"> include lab sample values that were collected from the same sample medium (e.g. surface water) using the same method (e.g. grab sample), and analyzed by the same lab in a single input file.</span></p>
+<p><span class="rvts8"><br></span></p>
+<p class="rvps1"><img border="0" alt hspace="1" vspace="1" src="lib/NewItem15.bmp"></p>
+<p class="rvps1"><span class="rvts8"><br></span></p>
+<p><span class="rvts8"><br></span></p>
+<h2 class="rvps14"><span class="rvts0"><span class="rvts64">Using the Upload Wizard</span></span></h2>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8">After saving the data file as a .csv file, use the following steps to load data into VOEIS. </span></p>
+<p><span class="rvts8"><br></span></p>
+<p class="rvps15"><span class="rvts8">1. </span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">Navigate to the VOEIS Data Hub using your web browser and log in. &nbsp;Then select the project you would like to add data to from the Projects dropdown as shown below.</span></p>
+<p><span class="rvts8"><br></span></p>
+<p class="rvps1"><img border="0" alt hspace="1" vspace="1" src="lib/NewItem83.bmp"></p>
+<p class="rvps1"><span class="rvts8"><br></span></p>
+<p class="rvps1"><span class="rvts8"><br></span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8">2. </span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">In the (Project_Name) dropdown menu, select ‘Add Sample Data’</span></p>
+<p><span class="rvts8"><br></span></p>
+<p class="rvps1"><img border="0" alt hspace="1" vspace="1" src="lib/NewItem82.bmp"></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"><br></span></p>
+<p class="rvps15"><span class="rvts8">3. </span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">In Step 1 of the data upload wizard, select the site that your data will be associated with from the site list. </span></p>
+<p class="rvps15"><span class="rvts8"><br></span></p>
+<p><span class="rvts8"><br></span></p>
+<p class="rvps1"><img border="0" alt hspace="1" vspace="1" src="lib/NewItem87.bmp"></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"><br></span></p>
+<p class="rvps10"><span class="rvts8">You can sort the site list by clicking on the header boxes, or define a custom filter by clicking the button on the upper left with the yellow arrow in it. Clicking this button calls the pop-out window below. Custom filtering rules are described using Boolean logic and can be applied to a single column, or multiple columns.</span></p>
+<p class="rvps10"><span class="rvts8"><br></span></p>
+<p class="rvps10"><span class="rvts8"><br></span></p>
+<p class="rvps1"><img border="0" alt hspace="1" vspace="1" src="lib/NewItem11.bmp"></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8">4. </span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">Next, browse to the file to be loaded. Click the ‘Open’ button.</span></p>
+<p><span class="rvts8"><br></span></p>
+<p class="rvps1"><img border="0" alt hspace="1" vspace="1" src="lib/NewItem10.bmp"></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"><br></span></p>
+<p class="rvps15"><span class="rvts8">5. </span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">Select the row that the data sample values begin on. All rows above this row will be ignored when the data is loaded into VOEIS. </span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"><br></span></p>
+<p class="rvps1"><img border="0" alt hspace="1" vspace="1" src="lib/NewItem9.bmp"></p>
+<p><span class="rvts8"><br></span></p>
+<p class="rvps15"><span class="rvts8">6. </span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">You must next decide whether to define a new parsing template for parsing your data, or reuse a previously defined template. If you select and existing template, you may preview the formatting applied to your file by clicking the 'Preview Template' button. When you are satisfied with your selection, click ‘Upload File’.</span></p>
+<p class="rvps15"><span class="rvts8"><br></span></p>
+<p class="rvps16"><img border="0" alt hspace="1" vspace="1" src="lib/NewItem8.bmp"></p>
+<p class="rvps15"><span class="rvts8"><br></span></p>
+<p class="rvps15"><span class="rvts8"><br></span></p>
+<p class="rvps15"><span class="rvts8">7.</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">If you decided to parse your data with and existing template, skip to Step 9. Otherwise, you will need to name and describe the data template you are about to create. Select the appropriate Source, Sample Type, and Sample Medium information. </span></p>
+<p><span class="rvts8"><br></span></p>
+<p class="rvps1"><img border="0" alt hspace="1" vspace="1" src="lib/NewItem7.bmp"></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"><br></span></p>
+<p class="rvps10"><span class="rvts8">If the appropriate source is not already contained in the dropdown box, click the green button on the left. A pop-out window will appear and allow you to describe a new data source.</span></p>
+<p><span class="rvts8"><br></span></p>
+<p class="rvps1"><img border="0" alt hspace="1" vspace="1" src="lib/NewItem6.bmp"></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"><br></span></p>
+<p class="rvps10"><span class="rvts8">Describe the time support associated with your data file. You must identify whether your time stamps are recorded in UTC Date Time or Local Date Time. If they are recorded in Local Date Time, you need to select the UTC Offset (This is the time zone correction for the location where the measurements were collected) and identify whether or not a Daylight Savings Time adjustment needs to be applied to all timestamps in the file (e.g. the Montana UTC Offset is -7). &nbsp;</span><span class="rvts22">Note: do NOT adjust the UTC Offset to account for Daylight Savings Time AND select the Daylight Savings Time checkbox. Account for Daylight Savings Time using only one of these methods.</span><span class="rvts8"> </span></p>
+<p><span class="rvts8"><br></span></p>
+<p class="rvps1"><img border="0" alt hspace="1" vspace="1" src="lib/NewItem5.bmp"></p>
+<p><span class="rvts8"><br></span></p>
+<p class="rvps10"><span class="rvts8">After all of the data descriptor dropdowns are populated, the ‘Next’ button will be activated. Click ‘Next’ to begin describing each of the columns in the data file.</span></p>
+<p><span class="rvts8"><br></span></p>
+<p class="rvps15"><span class="rvts8">8. </span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">Each column in the data file must be described using one of the options in the ‘Select Column Assignment’ dropdown list displayed below. The options ‘Assign The Timestamp To This Column’, ‘Assign The Sample ID To This Column’, and ‘Assign The Vertical Offset To This Column’ may only be used once. </span></p>
+<p><span class="rvts8"><br></span></p>
+<p class="rvps1"><img border="0" alt hspace="1" vspace="1" src="lib/NewItem86.bmp"></p>
+<p class="rvps10"><span class="rvts8"><br></span></p>
+<p class="rvps10"><span class="rvts8"><br></span></p>
+<p class="rvps10"><span class="rvts8">Variables can be assigned to a column of data sample values in three ways. The first method is to ‘Assign An Existing Variable from Local’ to the column. When this option is selected, a data table pop-out appears. This table includes all of the variables previously described in this project. You can sort results in the data table by clicking one of the column header boxes. This will sort rows alphabetically (string values) or in ascending order (numeric values) by the values contained in the selected column. Secondary filters can be applied in subsequent columns in the same manner. &nbsp;The secon method is to ‘Assign An Existing Variable from Global’ to the column. This option works in much the same way, but variables are selected from the global list in VOEIS, instead of the local list stored for your proejct.</span></p>
+<p><span class="rvts8"><br></span></p>
+<p class="rvps1"><img border="0" alt hspace="1" vspace="1" src="lib/NewItem3.bmp"></p>
+<p><span class="rvts8"><br></span></p>
+<p class="rvps10"><span class="rvts8">Another option for filtering the variables table is to apply custom filters. To do this, click the small button with the yellow arrow located in the upper left of the pop-out window. This button calls the pop-out window below. Custom filtering rules can be described using Boolean logic and applied to either a single column or multiple columns.</span></p>
+<p class="rvps10"><span class="rvts8"><br></span></p>
+<p class="rvps1"><img border="0" alt hspace="1" vspace="1" src="lib/NewItem2.bmp"></p>
+<p class="rvps1"><span class="rvts8"><br></span></p>
+<p class="rvps10"><span class="rvts22">If you choose to select an existing variable, be sure to check each of the columns in the table to ensure that the variable you select is associated with the appropriate meta-data.</span></p>
+<p class="rvps1"><span class="rvts8"><br></span></p>
+<p><span class="rvts8"><br></span></p>
+<p class="rvps10"><span class="rvts8">The second means for assigning a variable to a column of data values is to select the ‘Add A New Variable’ option from the ‘Select Column Assignment’ dropdown list. Selecting this option calls a pop-out window like the one shown below. You can add fields to dropdown lists using the green button to the left of the dropdown list title. After all of the required dropdown lists are populated, click the ‘Create Variable’ button. </span></p>
+<p class="rvps10"><span class="rvts8"><br></span></p>
+<p class="rvps1"><img border="0" width="497" height="357" alt hspace="1" vspace="1" src="lib/NewItem1.bmp"></p>
+<p class="rvps1"><span class="rvts22"><br></span></p>
+<p class="rvps1"><span class="rvts22"><br></span></p>
+<p class="rvps10"><span class="rvts22">NOTE: Do not reuse a single variable_id multiple times in a single parsing template (ex. assigning two data columns with the same temperature variable_id). Doing so will result in replicate data values for a single time_stamp:variable_id pair, and will significantly impede interpretation of data queried from VOEIS. </span></p>
+<p class="rvps1"><span class="rvts8"><br></span></p>
+<p><span class="rvts8"><br></span></p>
+<p class="rvps15"><span class="rvts8">9. </span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">Custom metatags may be assigned to one or more columns in the upload file. Metatags are flexible metadata assignments that can be used to describe a column of notes, censored value codes, etc. When you want to define a column as a metatag, you may do so by selecting an existing metatag from the list presented in the Metatag dialog box, or you may create a new tag by defining a name/category pair. When you define a new metatag, make sure you include enough information in the name so that you and others will know what the values mean later. </span></p>
+<p class="rvps15"><span class="rvts8"><br></span></p>
+<p class="rvps16"><img border="0" alt hspace="1" vspace="1" src="lib/NewItem85.bmp"></p>
+<p class="rvps15"><span class="rvts8"><br></span></p>
+<p class="rvps15"><span class="rvts8">10.</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">As columns in the data file are described, a summary of the parsing instructions is populated at the bottom of the page. Preview this summary to ensure that all of the data fields are defined correctly. If you spot an error in the summary table, simply scroll up to the column where the error exists and edit that column’s description.</span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"><br></span></p>
+<p><span class="rvts8"><br></span></p>
+<p class="rvps1"><img border="0" alt hspace="1" vspace="1" src="lib/NewItem.bmp"></p>
+<p><span class="rvts8"><br></span></p>
+<p class="rvps15"><span class="rvts8">11.</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">When all columns are described and the summary table has been checked carefully to ensure that the data file is correctly characterized, click the ‘Save Samples’ button.</span></p>
+<p class="rvps15"><span class="rvts8"><br></span></p>
+<p class="rvps15"><span class="rvts8"><br></span></p>
+<p class="rvps15"><span class="rvts8"><br></span></p>
+<p class="rvps15"><span class="rvts8"> &nbsp;</span></p>
+<p class="rvps2"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="http://www.helpndoc.com">Easily create iPhone documentation</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2011,   Montana State University</div>
+		</div>
+	</body>
+	
+</html>
+
